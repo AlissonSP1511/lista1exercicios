@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const totaleleitores = Number(prompt('Digite a quantidade total de eleitores?'));
+        const totalbancos = Number(prompt('Digite a quantidade total de brancos?'));
+        const totalnulos = Number(prompt('Digite a quantidade total de nulos?'));
+        const totalvalidos = Number(prompt('Digite a quantidade total de validos?'));
+
+        const somatotal = totalbancos + totalnulos + totalvalidos;
+
+        if (somatotal > totaleleitores) {
+            console.log('Quantidade de votos inválida');
+        } else {
+
+            const porcentagembrancos = (totalbancos / totaleleitores) * 100;
+            const porcentagemnulos = (totalnulos / totaleleitores) * 100;
+            const porcentagemvalidos = (totalvalidos / totaleleitores) * 100;
+
+            console.log('Porcentagem de votos brancos: ' + porcentagembrancos);
+            console.log('Porcentagem de votos nulos: ' + porcentagemnulos);
+            console.log('Porcentagem de votos validos: ' + porcentagemvalidos);
+        }
+
+    </script>
+
+</body>
+
+</html>
