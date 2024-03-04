@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // input dos dados
+        let custoCarro = Number(prompt('digite o custo do carro'));
+        // validação dos dados
+        while (custoCarro < 0){
+            custoCarro = Number(prompt('digite o custo do carro'));
+        }
+        let impostos = Number(prompt('digite o imposto'));
+        while (impostos < 0 || impostos > 100){
+            impostos = Number(prompt('digite o imposto'));
+        }
+        let porcentagemDistribuidor = Number(prompt('digite a porcentagem do distribuidor'));
+        while (porcentagemDistribuidor < 0 || porcentagemDistribuidor > 100){
+            porcentagemDistribuidor = Number(prompt('digite a porcentagem do distribuidor'));
+        }
+
+
+        // calculo
+        const precoCunsumidor = custoCarro + (custoCarro * (impostos/100)) + (custoCarro * (porcentagemDistribuidor/100));
+        // saida
+        alert(`O valor a ser pago pelo consumidor é de R$${precoCunsumidor},00`);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        let salarioMensal = Number(prompt('Digite seu salario mensal'));
+        while (salarioMensal < 0){
+            salarioMensal = Number(prompt('Digite seu salario mensal'));
+        }
+        let porcentagemReajuste = Number(prompt('Digite a porcentagem de reajuste'));
+        while (porcentagemReajuste < 0){
+            porcentagemReajuste = Number(prompt('Digite a porcentagem de reajuste'));
+        }
+
+        alert(`Seu salario antigo era R$${salarioMensal},00\n\nReajuste de ${porcentagemReajuste}%\n\nSeu novo salario e R$${salarioMensal + (salarioMensal * porcentagemReajuste / 100)},00`);
+
+    </script>
+</body>
+</html>

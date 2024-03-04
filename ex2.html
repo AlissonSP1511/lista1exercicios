@@ -9,25 +9,42 @@
 
 <body>
     <script>
-
-        const totaleleitores = Number(prompt('Digite a quantidade total de eleitores?'));
-        const totalbancos = Number(prompt('Digite a quantidade total de brancos?'));
-        const totalnulos = Number(prompt('Digite a quantidade total de nulos?'));
-        const totalvalidos = Number(prompt('Digite a quantidade total de validos?'));
-
-        const somatotal = totalbancos + totalnulos + totalvalidos;
-
+        // input dos dados
+        let totaleleitores = Number(prompt('Digite a quantidade total de eleitores?'));
+        // validação dos dados
+        while (totaleleitores <= 0) {
+            totaleleitores = Number(prompt('Digite a quantidade total de eleitores?'));
+        }
+        let totalbancos = Number(prompt('Digite a quantidade total de brancos?'));
+        while (totalbancos <= 0) {
+            totalbancos = Number(prompt('Digite a quantidade total de brancos?'));
+        }
+        let totalnulos = Number(prompt('Digite a quantidade total de nulos?'));
+        while (totalnulos <= 0) {
+            totalnulos = Number(prompt('Digite a quantidade total de nulos?'));
+        }
+        let totalvalidos = Number(prompt('Digite a quantidade total de validos?'));
+        while (totalvalidos <= 0) {
+            totalvalidos = Number(prompt('Digite a quantidade total de validos?'));
+        }
+        // calculo total
+        let somatotal = totalbancos + totalnulos + totalvalidos;
+        // validação se a quantidade de votos e maior que o total de eleitores
         if (somatotal > totaleleitores) {
             console.log('Quantidade de votos inválida');
         } else {
-
-            const porcentagembrancos = (totalbancos / totaleleitores) * 100;
-            const porcentagemnulos = (totalnulos / totaleleitores) * 100;
-            const porcentagemvalidos = (totalvalidos / totaleleitores) * 100;
-
+            // calculo das porcentagens
+            let porcentagembrancos = (totalbancos / totaleleitores) * 100;
+            let porcentagemnulos = (totalnulos / totaleleitores) * 100;
+            let porcentagemvalidos = (totalvalidos / totaleleitores) * 100;
+            let porcentagemInvalidos = (totaleleitores - somatotal) / totaleleitores * 100;
+            // exibição das porcentagens
             console.log('Porcentagem de votos brancos: ' + porcentagembrancos);
             console.log('Porcentagem de votos nulos: ' + porcentagemnulos);
             console.log('Porcentagem de votos validos: ' + porcentagemvalidos);
+            console.log('Porcentagem de votos inválidos: ' + porcentagemInvalidos);
+            alert(`Porcentagem de votos brancos: ${porcentagembrancos}\nPorcentagem de votos nulos: ${porcentagemnulos}\nPorcentagem de votos validos: ${porcentagemvalidos}\nPorcentagem de votos inválidos: ${porcentagemInvalidos}`);	
+
         }
 
     </script>

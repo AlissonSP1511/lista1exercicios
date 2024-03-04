@@ -9,32 +9,49 @@
 
 <body>
     <script>
-        const n1 = Number(prompt('digite o primeiro valor'));
-        const n2 = Number(prompt('digite o segundo valor'));
-        const n3 = Number(prompt('digite o terceiro valor'));
-        const n4 = Number(prompt('digite o quarto valor'));
+        // input dos dados
+        let n1 = Number(prompt('digite o primeiro valor'));
+        // validação dos dados entre 0 e 10
+        while (n1 > 10 || n1 < 0) {
+                n1 = Number(prompt('digite o primeiro valor'));
+        }
+        console.log(n1);
 
-        if ((n1|| n2|| n3|| n4) > 10 || (n1|| n2|| n3|| n4) < 0) {
-            console.log('Nota inválida');
-            
+        let n2 = Number(prompt('digite o segundo valor'));
+        while (n2 > 10 || n2 < 0) {
+            n2 = Number(prompt('digite o segundo valor'));
+        }
+        console.log(n2);
+
+        let n3 = Number(prompt('digite o terceiro valor'));
+        while (n3 > 10 || n3 < 0) {
+            n3 = Number(prompt('digite o terceiro valor'));
+        }
+        console.log(n3);
+
+        let n4 = Number(prompt('digite o quarto valor'));
+        while (n4 > 10 || n4 < 0) {
+            n4 = Number(prompt('digite o quarto valor'));
+        }
+        console.log(n4);
+
+        // calculo da media
+        let media = (n1 + n2 + n3 + n4) / 4;
+        console.log(`media = ${media}`);
+
+        // resultado
+        if (media >= 7) {
+            console.log('Aprovado');
+            alert(`media = ${media} \n Aprovado`);
+        }
+        else if (media >= 5) {
+            console.log('Recuperação');
+            alert(`media = ${media}\n Recuperação`);
         }
         else {
-
-            const media = (n1 + n2 + n3 + n4) / 4;
-
-            console.log(media);
-
-            if (media >= 7) {
-                console.log('Aprovado');
-            }
-            else if (media >= 5) {
-                console.log('Recuperação');
-            }
-            else {
-                console.log('Reprovado');
-            }
+            console.log('Reprovado');
+            alert(`media = ${media}\n Reprovado`);
         }
-
     </script>
 </body>
 

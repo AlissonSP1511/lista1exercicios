@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let raio = Number(prompt('digite o raio em metros'));
+        while (raio < 0){
+            raio = Number(prompt('digite o raio em metros'));
+        }
+        let altura = Number(prompt('digite a altura em metros'));
+        while (altura < 0){
+            altura = Number(prompt('digite a altura em metros'));
+        }
+        const volume = (Math.PI * Math.pow(raio, 2) * altura);
+        const roundedVolume = Math.round(volume * 100) / 100
+        function roundToTwo(num) {
+            return +(Math.round(num + 'e+2') + 'e-2');
+        }
+        alert(`O volume do cilindro e ${roundToTwo(volume)}m³`);
+    </script>    
+</body>
+</html>
+
+function roundToTwo(num) {
+    return +(Math.round(num + 'e+2') + 'e-2');
+  }
+  console.log(roundToTwo(2.005));

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const porcentagemComissao = 5/100
+
+        let numeroDeCarrosVendidos = Number(prompt('digite o numero de carros vendidos'));
+        while (numeroDeCarrosVendidos < 0){
+            numeroDeCarrosVendidos = Number(prompt('digite o numero de carros vendidos'));
+        }
+        let valorTotalVendido = Number(prompt('digite o valor total vendido'));
+        while (valorTotalVendido < 0){
+            valorTotalVendido = Number(prompt('digite o valor total vendido'));
+        }
+        let salarioFixo = Number(prompt('digite o salario fixo'));
+        while (salarioFixo < 0){
+            salarioFixo = Number(prompt('digite o salario fixo'));
+        }
+        let valorPorCarro = Number(prompt('digite a comissão fixa por carro'));
+        while (valorPorCarro < 0){
+            valorPorCarro = Number(prompt('digite a comissão fixa por carro'));
+        }
+        
+        const salarioTotal = (numeroDeCarrosVendidos * valorPorCarro) + (valorTotalVendido * porcentagemComissao) + (salarioFixo);
+        alert(`O valor a ser pago pelo vendedor é de R$${salarioTotal},00`);
+    </script>
+</body>
+</html>
